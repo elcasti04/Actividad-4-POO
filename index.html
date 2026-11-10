@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Biblioteca Nórdica | Administración</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Biblioteca Nórdica, inicio">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M8 7h8M8 11h6"/></svg></span>
+        <span class="brand-copy"><strong>nórdica</strong><small>BIBLIOTECA DIGITAL</small></span>
+      </a>
+      <div class="nav-caption">MENÚ PRINCIPAL</div>
+      <nav class="navigation" aria-label="Navegación principal">
+        <button class="nav-link active" data-section="dashboard"><span class="nav-icon"><i class="fa-solid fa-house"></i></span>Panel principal</button>
+        <button class="nav-link" data-section="catalogo"><span class="nav-icon"><i class="fa-solid fa-book-open"></i></span>Catálogo de libros</button>
+        <button class="nav-link" data-section="usuarios"><span class="nav-icon"><i class="fa-solid fa-users"></i></span>Usuarios</button>
+        <button class="nav-link" data-section="prestamos"><span class="nav-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></span>Préstamos</button>
+        <div class="nav-caption nav-caption-spaced">PREFERENCIAS</div>
+        <button class="nav-link" data-section="configuracion"><span class="nav-icon"><i class="fa-solid fa-gear"></i></span>Configuración</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">✦</span><strong>¿Necesitas ayuda?</strong><p>Consulta la guía de uso de la biblioteca.</p><button id="help-button">Ver guía <span>→</span></button></div>
+        <div class="sidebar-profile"><span class="avatar avatar-admin">AM</span><span><strong>Admin. María</strong><small>Administradora</small></span><button aria-label="Opciones de perfil">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" id="mobile-menu" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+        <div class="breadcrumb"><span>Biblioteca</span><b>/</b><strong id="breadcrumb-current">Panel principal</strong></div>
+        <div class="topbar-actions">
+          <label class="global-search"><span><i class="fa-solid fa-magnifying-glass"></i></span><input id="global-search" type="search" placeholder="Buscar libros, usuarios..." aria-label="Buscar en la biblioteca"><kbd>⌘ K</kbd></label>
+          <button class="icon-button notification-button" aria-label="Notificaciones" id="notification-button"><span><i class="fa-regular fa-bell"></i></span><i></i></button>
+          <div class="admin-chip"><span class="avatar avatar-admin">AM</span><span><strong>María</strong><small>Administradora</small></span><span class="chevron">⌄</span></div>
+        </div>
+      </header>
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+  <dialog id="app-dialog" class="app-dialog"><div id="dialog-content"></div></dialog>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
